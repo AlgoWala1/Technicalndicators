@@ -31,6 +31,7 @@ def CalcBeta(dataFrame):
   linearModel = LinearRegression()
   linearModel.fit(X,dataFrame["StockReturns"])
   print()
+  print("A 104 week Beta analysis")
   niftyBeta = round(linearModel.coef_[0],3)
   print("Beta value with regards to Nifty Index",niftyBeta)
   X = dataFrame[["AutoNiftyReturns"]]
